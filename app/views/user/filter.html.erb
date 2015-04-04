@@ -1,0 +1,30 @@
+<%= search_form_for @search, url: filter_users_path, method: :post do |f| %>
+  <%= f.condition_fields do |c| %>
+    <%= render "condition_fields", f: c %>
+  <% end %>
+  <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
+  <div class="field">
+    Sort:
+    <%= f.sort_fields do |s| %>
+      <%= s.sort_select %>
+    <% end %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
+<table id ="users_selected">
+  <tr>
+    <th><%= sort_link @search, :name, "Name" %></th>
+  </tr>  
+<%= @users.each do |user| %>
+  <tr>
+    <td><%= link_to(user.Name,profile_user_path) %></td>
+  </tr>
+<% end %>    
+</table>
+
+<ul>
+  <li><%= link_to "Send Messages" ,compose_message_path %></li>
+  <li><%= link_to "Send Notifications" ,compose_notifications_path %></li>
+  <li></li>
+</ul>

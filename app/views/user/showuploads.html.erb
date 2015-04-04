@@ -1,0 +1,68 @@
+<h1>SHOW STUDENTS</h1>
+
+ <%if  @lastuser.Student_ID %>     
+
+	<table id = "recent_students">
+	<tr>
+		<td>Name</td>
+		<td>StudentId</td>
+		<td>Phone</td>
+		<td>Email Address</td>
+		<td>Specialization</td>
+		<td>City</td>
+		<td>Center</td>
+		<td>College</td>
+		<td>Batch</td>
+		<td>Course</td>
+		<td>Stream</td>
+		<td>YearOfExam</td>
+
+	</tr>
+	<% @users.each do |user| %>
+	<tr>
+		<td><%= user.Name %></td>
+		<td><%= user.Student_ID%></td>
+		<td><%=user.Phone_Number %></td>
+		<td><%=user.Email_Address %></td>
+		<td><%=user.Specialisation %></td>
+		<td><%=user.City %></td>
+		<td><%=user.Center %></td>
+		<td><%=user.College %></td>
+		<td><%=user.Batch %></td>
+		<td><%=user.Course %></td>
+		<td><%=user.Stream %></td>
+		<td><%=user.Year_of_Exam %></td>
+
+	</tr>
+	
+	<% end %>
+
+<%else%>
+	
+	<table id = "recent_faculties">
+	<tr>
+		<td>Name</td>
+		<td>Phone</td>
+		<td>Email Address</td>
+		<td>Specialization</td>
+		<td>City</td>
+		<td>Center</td>
+		<td>Course</td>
+		
+	</tr>
+
+	<% @users.each do |user| %>
+	<tr>
+		<td><%= user.Name %></td>
+		<td><%=user.Phone %></td>
+		<td><%=user.EmailId %></td>
+		<td><%=user.Specialization %></td>
+		<td><%=user.City %></td>
+		<td><%=user.Center %></td>
+		<td><%=user.Course %></td>
+		
+    </tr>
+    <%end%>
+    </table>
+    
+<%end%>    

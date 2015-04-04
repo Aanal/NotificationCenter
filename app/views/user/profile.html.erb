@@ -1,0 +1,68 @@
+
+
+ <%if  @user.Student_ID %>     
+
+	<table id = "profile">
+	<tr>
+		<td>Name</td>
+		<td>StudentId</td>
+		<td>Phone</td>
+		<td>Email Address</td>
+		<td>Specialization</td>
+		<td>City</td>
+		<td>Center</td>
+		<td>College</td>
+		<td>Batch</td>
+		<td>Course</td>
+		<td>Stream</td>
+		<td>YearOfExam</td>
+
+	</tr>
+	
+	<tr>
+		<td><%= @user.Name %></td>
+		<td><%= @user.Student_ID%></td>
+		<td><%= @user.Phone_Number %></td>
+		<td><%= @user.Email_Address %></td>
+		<td><%= @user.Specialisation %></td>
+		<td><%= @user.City %></td>
+		<td><%= @user.Center %></td>
+		<td><%= @user.College %></td>
+		<td><%= @user.Batch %></td>
+		<td><%= @user.Course %></td>
+		<td><%= @user.Stream %></td>
+		<td><%= @user.Year_of_Exam %></td>
+
+	</tr>
+	
+	
+
+<%else%>
+	
+	<table id = "profile">
+	<tr>
+		<td>Name</td>
+		<td>Phone</td>
+		<td>Email Address</td>
+		<td>Specialization</td>
+		<td>City</td>
+		<td>Center</td>
+		<td>Course</td>
+		
+	</tr>
+
+	
+	<tr>
+		<td><%= @user.Name %></td>
+		<td><%= @user.Phone %></td>
+		<td><%= @user.EmailId %></td>
+		<td><%= @user.Specialization %></td>
+		<td><%= @user.City %></td>
+		<td><%= @user.Center %></td>
+		<td><%= @user.Course %></td>
+		
+    </tr>
+    
+    </table>
+    
+<%end%>    

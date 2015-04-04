@@ -1,0 +1,13 @@
+<%= form_tag :action=>:signin do %>
+    <%= text_field_tag "Email_Address" %>
+    <%= text_field_tag "Password" %>
+    <%= submit_tag "Sign In" %>
+<% end %>
+ 
+This is for resetting password
+
+
+<%= form_tag :action=>:forgot_password do %>
+    <%= text_field_tag "Email_Address" %>
+    <%= submit_tag "Submit" %>
+<% end %>

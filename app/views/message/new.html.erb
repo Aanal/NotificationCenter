@@ -1,0 +1,9 @@
+<h1>Hi</h1>
+
+
+<%= form_tag compose_message_path do %>
+Title:<%= text_field_tag :Title%>
+Text:<%=text_area_tag :Text %>
+<%= submit_tag "Create" %>
+<% end %>
+
